@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harafi Restaurant | مطعم حرافي</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Harafi Restaurant - Premium dining experience with delicious meals, fast delivery, and luxury atmosphere.">
+  <meta name="keywords" content="restaurant, food, harafi, Yemeni food, delivery">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Harafi Restaurant" />
+  <meta property="og:description" content="Luxury dining experience in Yemen" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<!-- NAV -->
+<header class="navbar">
+  <div class="logo">🔥 Harafi</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li>Home</li>
+    <li>Menu</li>
+    <li>About</li>
+    <li>Reservation</li>
+    <li>Contact</li>
+  </ul>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Luxury Taste Experience</h1>
+    <p>Welcome to Harafi Restaurant – where flavor meets elegance.</p>
+    <button onclick="openCheckout()">Order Now</button>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu">
+  <h2>Our Menu</h2>
+
+  <input type="text" placeholder="Search food..." oninput="filterMenu(this.value)"/>
+
+  <div class="menu-grid" id="menuGrid">
+    <div class="card">🔥 Grilled Chicken - $8</div>
+    <div class="card">🍕 Italian Pizza - $10</div>
+    <div class="card">🍔 Beef Burger - $6</div>
+    <div class="card">🥗 Healthy Salad - $5</div>
+    <div class="card">🍤 Seafood Plate - $12</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <h2>About Us</h2>
+  <p>
+    Harafi Restaurant brings premium dining with Yemeni hospitality and international flavors.
+  </p>
+</section>
+
+<!-- RESERVATION -->
+<section class="reservation">
+  <h2>Book a Table</h2>
+  <form>
+    <input type="text" placeholder="Name" required>
+    <input type="date" required>
+    <input type="time" required>
+    <button>Reserve</button>
+  </form>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <h2>Contact</h2>
+  <p>📍 Yemen - Dhamar</p>
+  <p>⏰ 9AM - 12AM</p>
+
+  <a class="whatsapp-btn"
+     href=":contentReference[oaicite:0]{index=0}"
+     target="_blank">
+     💬 WhatsApp Us
+  </a>
+</section>
+
+<!-- CHECKOUT MODAL -->
+<div id="checkout" class="modal">
+  <div class="modal-content">
+    <h2>Checkout</h2>
+
+    <select>
+      <option>Stripe</option>
+      <option>PayPal</option>
+      <option>Yemeni Payment</option>
+    </select>
+
+    <input placeholder="Card Number">
+    <input placeholder="Name on Card">
+
+    <button onclick="pay()">Pay Now</button>
+    <button onclick="closeCheckout()">Close</button>
+  </div>
+</div>
+
+<!-- AI CHATBOT -->
+<div class="chatbot">
+  <div class="chat-header">AI Assistant</div>
+  <div class="chat-body" id="chatBody"></div>
+
+  <input id="chatInput" placeholder="Ask about menu..." />
+</div>
+
+<footer>
+  <p>© 2026 Harafi Restaurant</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
